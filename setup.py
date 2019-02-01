@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 NAME = 'django-codemirror-widget'
-VERSION = '0.4.1'
+VERSION = '0.5.0'
 
 
 def read(filename):
@@ -11,13 +11,13 @@ def read(filename):
     with open(filename, 'r') as fi:
         return fi.read()
 
- 
+
 def readlist(filename):
     rows = read(filename).split("\n")
     rows = [x.strip() for x in rows if x.strip()]
     return list(rows)
 
- 
+
 setup(
     name=NAME,
     version=VERSION,
@@ -27,11 +27,13 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
+	'Framework :: Django :: 1.10',
+	'Framework :: Django :: 1.11',
+	'Framework :: Django :: 2.0',
+	'Framework :: Django :: 2.1',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
